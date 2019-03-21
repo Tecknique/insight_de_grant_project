@@ -1,16 +1,16 @@
 ### Project Idea
-This project focuses on creating a low latency, scalable solution to provide fault tolerant, live  analytical data on present and historical federal government funding practices.
+This project focuses on creating a low latency, scalable solution to provide fault tolerant, schedule-updated analytical data on present and historical federal government funding practices.
 
 ###  Tech Stack
 Raw Data: usaspending.gov api
 
 S3: to store the over 1 TB of data
 
-Kafka Streams: Send data into a kafka cluster via its producer of topics and their partitions. Kafka runs on one or more broker (server) and the partitions of the topics are distributed out across the cluster nodes. Partitions are copied to multiple brokers, which means that not only one “messenger” is sending the message, but multiple brokers are. This makes it fault tolerant
+Kafka: Fault tolerant storage, perform batch processing, best for managing large amounts of data.
 
  (as a distributed messaging system of unbounded flow of facts. No micro-batching. It’s per-record streaming. Fault tolerant, elastically scalable.)
 
-Apache Airflow: Data updates once a day so real time processing isn't necessary
+Apache Airflow: Because new data is updated once a day, Apache Airflow is a better choice than Spark Streams or Apache Storm because you can set a timed update schedule. 
 
 PostgreSQL:  Relational Database
 
@@ -23,7 +23,7 @@ Available: Downloaded, updates daily
 
 ### Engineering Challenge
 
-Large scale, changing data, analytical processing.
+Large scale, scheduled updates of data, analytical processing.
 User selection of variables
 
 ### Business  Value
@@ -31,3 +31,6 @@ Provides insight into how consumers should skew their product or word their appl
 
 ### MVP
 Provides analytics and visualization of current and past and present (streaming) trends of approved government funding based on a user interface engine with choices of variables to compare.
+
+### Stretch Goals
+Join with databases that contain associated budgets, and IPO stocks stock market value after approval
