@@ -2,6 +2,9 @@
 This project focuses on creating a low latency, scalable solution to provide fault tolerant, schedule-updated analytical data on present and historical federal government funding practices.
 
 ###  Tech Stack
+
+![image](workflow.dia)
+
 Raw Data: usaspending.gov api
 
 S3: to store the over 1 TB of data
