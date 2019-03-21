@@ -10,9 +10,17 @@ Kafka: Fault tolerant storage, perform batch processing, best for managing large
 
  (as a distributed messaging system of unbounded flow of facts. No micro-batching. It’s per-record streaming. Fault tolerant, elastically scalable.)
 
-Apache Airflow: Because new data is updated once a day, Apache Airflow is a better choice than Spark Streams or Apache Storm because you can set a timed update schedule. 
+Apache Airflow: Because new data is updated once a day, Apache Airflow is a better choice than Spark Streams or Apache Storm because you can set a timed update schedule.
 
-PostgreSQL:  Relational Database
+PostgreSQL: Relational Database
+or
+SQLAlchemy: Python SQL toolkit
+
+PyGal: Interactive visualizations
+
+flask: web app toolkit
+
+
 
 PyGal: Analytics
 
